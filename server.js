@@ -14,7 +14,9 @@ app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
 app.use('/', (req, res) => {
-  res.render('index.html');
+  res.render('index.html', {
+    APP_URL: process.env.APP_URL
+  });
 });
 
 let messages = [];

@@ -16,7 +16,7 @@
     <button type="submit">Enviar</button>
   </form>
   <script type="text/javascript">
-    var socket = io(process.env.APP_URL);
+    var socket = io(APP_URL);
 
     function renderMessage(message) {
       $('.messages').append('<div class="message"><strong>'+ message.author +'</strong>: '+ message.message +'</div>');

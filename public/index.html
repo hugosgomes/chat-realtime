@@ -15,9 +15,8 @@
     <input type="text" name="message" placeholder="Digite sua mensagem">
     <button type="submit">Enviar</button>
   </form>
-  <script>var APP_URL = "<%= APP_URL %>";</script>
   <script type="text/javascript">
-    var socket = io(APP_URL);
+    var socket = io("https://chat-temporeal.herokuapp.com/");
 
     function renderMessage(message) {
       $('.messages').append('<div class="message"><strong>'+ message.author +'</strong>: '+ message.message +'</div>');

@@ -15,7 +15,8 @@ app.set('view engine', 'html');
 
 app.use('/', (req, res) => {
   res.render('index.html', {
-    APP_URL: process.env.APP_URL
+    // APP_URL: process.env.APP_URL
+    url: process.env.APP_URL
   });
 });
 
